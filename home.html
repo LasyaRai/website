@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./home.css">
+    
+</head>
+<style>
+    h1{
+    color:rgb(223, 209, 209);
+    float:center;
+    font-size:80px;
+    padding-left:20px;
+    padding-top: 20px;
+}
+body{
+    background-image:url("img.jpg");
+}
+h3{
+    
+    color: antiquewhite;
+    font-size: 30px;
+    
+}
+
+div{
+    color: antiquewhite;
+    font-size: 20px;
+    
+}
+
+p {
+    font-size: 40px;
+}
+h2{
+    color:rgb(223, 207, 207);
+    float:center; 
+    font-size: 35px;  
+}
+button{
+    font-size: 20px;
+    float:center;
+    background: rgb(218, 224, 228);
+    color:rgb(17, 13, 13);
+    margin-top: 25px;
+    height: 50px;
+    width:100px
+}
+</style>
+<body >
+
+    <h3 id ="current-time" align="right"></h3>
+
+    <h1 align="center">Page Visit Counter</h1>
+    <div align ="center">
+		<p>You have visited this page</p>
+		<h2 id="count"></h2>
+		<p>times</p>
+	</div>
+    <script>
+    let time=document.getElementById("current-time");
+
+    setInterval(()=>{
+        let d = new Date();
+    time.innerHTML = d.toLocaleTimeString();
+    },1000);
+</script>
+<script src="home.js"></script>
+
+<div class="d-grid gap-2 col-6 mx-auto" align="center">
+    <button class="btn btn-primary" type="button"><a href="index.html">home</a></button>
+    
+  </div>
+</body>
+</html>
